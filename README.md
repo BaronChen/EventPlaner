@@ -7,8 +7,6 @@ Set up instruction
    
 
 ```
-#!shell
-
   npm install gulp -g 
   npm install tsc -g 
   npm install typings -g 
@@ -20,19 +18,17 @@ Set up instruction
    
 
 ```
-#!shell
-
  npm install 
-typings install
+ typings install
 ```
 
 Build:
-#!shell
+```
 gulp build-dev
 ```
 
 Unit tests:
-#!shell
+```
 gulp unit-tests-backend //Run backend unit tests
 gulp unit-tests-frontend //Run frontend unit tests
 ```
