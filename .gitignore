@@ -1,0 +1,10 @@
+npm-debug.log
+tsconfig.json
+node_modules/
+.vscode/
+typings/
+coverage/
+build/
+public/**/*.js
+public/**/*.js.map
+!public/tokenhandler/tokenhandler.js

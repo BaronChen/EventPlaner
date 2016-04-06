@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default navbat-fixed-top navbar-inner">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" (click)="toggleCollapse()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="hidden-xs">
+            <ul class="nav navbar-nav">
+                <li [ngClass]="{active:isRouteActive('Auth')}"><a [routerLink]="['Auth']">Auth</a></li>
+                <li ><a [routerLink]="['PlanDetail', {id:'new'}]">PlanDetail</a></li>
+                <li class="nav-item dropdown" dropdown>
+                    <a class="nav-link dropdownToggle" dropdownToggle role="button">Routes <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" [routerLink]="['Auth']">Auth</a></li>
+                       <li><a class="dropdown-item" [routerLink]="['PlanDetail', {id:'new'}]">PlanDetail</a></li>
+                    </ul>
+                </li>
+                    
+            </ul>
+      
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="# ">Link</a></li>
+            </ul>
+        </div>
+        
+        <div class="visible-xs hidden-md-up ">
+            <ul class="nav nav-pills nav-stacked scrollable-menu" [collapse]="isCollapsed" (click)="toggleCollapse()">
+                <li><a [routerLink]="['Auth'] ">Auth</a></li>
+                <li><a [routerLink]="['PlanDetail', {id:'new'}] ">PlanDetail</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <!-- /.container-fluid -->
+</nav>

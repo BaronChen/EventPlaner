@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Angular 2 QuickStart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+   
+    <base href="/">
+    
+    <!-- inject:js -->
+    <!-- endinject -->
+     
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <script>
+      System.config({
+        packages: {        
+          "public": {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }, 
+        map: {
+            moment: 'node_modules/moment/moment.js'
+          }
+      });
+      System.import('public/main')
+            .then(null, console.error.bind(console));
+    </script>
+  </head>
+
+  <body> 
+    <my-app>Loading...</my-app>
+  </body>
+</html>

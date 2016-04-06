@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Angular 2 QuickStart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+   
+    <base href="/">
+    
+    <!-- inject:js -->
+    <script src="/node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="/node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="/node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="/node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
+    <script src="/node_modules/systemjs/dist/system.js"></script>
+    <script src="/node_modules/rxjs/bundles/Rx.min.js"></script>
+    <script src="/node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="/node_modules/angular2/bundles/http.min.js"></script>
+    <script src="/node_modules/angular2/bundles/router.min.js"></script>
+    <script src="/node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js"></script>
+    <!-- endinject -->
+     
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/content/site.css">
+    <!-- endinject -->
+
+    <script>
+      System.config({
+        packages: {        
+          "public": {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }, 
+        map: {
+            moment: 'node_modules/moment/moment.js'
+          }
+      });
+      System.import('public/main')
+            .then(null, console.error.bind(console));
+    </script>
+  </head>
+
+  <body> 
+    <my-app>Loading...</my-app>
+  </body>
+</html>
