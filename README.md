@@ -25,3 +25,15 @@ Set up instruction
  npm install 
 typings install
 ```
+
+Build:
+#!shell
+gulp build-dev
+```
+
+Unit tests:
+#!shell
+gulp unit-tests-backend //Run backend unit tests
+gulp unit-tests-frontend //Run frontend unit tests
+```
+
